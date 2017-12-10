@@ -1,0 +1,144 @@
+'''python script for calculator operations
+
+author:Saiprassanth
+
+date:30nov2017'''
+def add(a,b):
+  
+	c=int(a)+int(b)
+  
+	print ('the sum is',c)
+
+def sub(a,b):
+  
+	c=int(a)-int(b)
+
+	print ('the difference is',c)
+
+def mul(a,b):
+  
+	c=int(a)*int(b)
+  
+	print ('the product is',c)
+
+def div(a,b):
+  
+	try:
+    
+		c=int(a)/int(b)
+    
+		print('the quotient is',c)
+  
+	except Exception as e:
+    
+		print e
+
+o=raw_input('enter the operation you want to perform\n1.add\n2.sub\n3.mul\n4.divide\n')
+
+n1=raw_input('enter the first number')
+
+n2=raw_input('enter the second number')
+
+if o=='addition' or o=='add':
+  
+	add(n1,n2)
+
+if o=='subtract' or o=='sub':
+  
+	sub(n1,n2)
+
+if o=='multiplication' or o=='mul':
+  
+	mul(n1,n2)
+
+if o=='divide' or o=='div':
+  
+	div(n1,n2)
+
+
+
+
+
+
+
+
+'''concatenate two strings
+
+author:Saiprassanth
+
+date:30nov2017'''
+
+def conca(a,b):
+
+  c=a+b
+  print 'the concatenated string is',c
+
+str1=raw_input('enter the first string')
+
+str2=raw_input('enter the second string')
+
+conca(str1,str2)
+
+
+
+
+'''sum of the digits
+
+author:Saiprassanth
+
+date:30nov2017'''
+
+def sum_digits(a):
+
+  total=0
+
+  for i in a:
+
+    total=total+int(i)
+
+  print 'total is',total
+
+str=raw_input('enter the number')
+
+sum_digits(str)
+
+
+
+
+'''writing and reading a file and perform operations on the file
+
+author:Saiprassanth
+
+date:30nov2017'''
+
+def read_file():
+
+  tem=0
+
+  file=open('mark.txt','r')
+
+  lis=file.readlines()
+
+  for i in lis:
+
+    l=i.split('=')
+
+    no=l[1].strip().strip('\n')
+
+    tem=tem+int(no)
+
+  print tem
+
+  file.close()
+
+def write_file():
+
+  file=open('mark.txt','w')
+
+  file.write('science=50\n maths=90\n english=85 \n tamil=92')
+
+  file.close()
+
+write_file()
+
+read_file()

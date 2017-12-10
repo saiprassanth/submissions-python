@@ -1,0 +1,153 @@
+i.calculating yout birth number in numerology
+26/11/1978
+2+6+1+1+1+9+7+8=8
+
+dob=raw_input('enter your birth year')
+
+n=0
+
+for i in dob:
+  
+	if i in ['1','2','3','4','5','6','7','8','9','0']:
+    
+		j=int(i)
+    
+		n=n+j
+
+u=n%10
+
+t=n/10
+
+print u+t
+
+ii.write a python program to find the sum of three given integers if any two values are equal then the sum is zero
+
+n1=raw_input('enter the first no')
+
+n2=raw_input('enter the second no')
+
+n3=raw_input('enter the last no')
+
+if n1==n2 or n1==3 or n2==3:
+  
+	print 0
+
+else:
+  
+	total=int(n1)+int(n2)+int(n3)
+  
+	print total
+
+iii.write a python program to find whethere the given year is a leap year or not
+
+year=raw_input('enter the year')
+
+if((int(year)%4==0 and int(year)%100!=0) or(int(year)%400==0)):
+  
+	print 'leap year'
+
+else:
+  
+	print 'nonleap year'
+iv.python script to validate a strong password
+
+import re
+
+pas=raw_input('enter the password')
+
+
+aflag =False
+
+
+dflag=False
+
+
+sflag=False
+
+
+special=['!','@','#','$','%','^','&','*']
+
+
+if re.search("[a-z]",pas):
+  
+	aflag=True
+
+
+if  re.search("[0-9]",pas):
+  
+	
+	dflag=True
+
+
+for i in pas:
+  
+	
+	if i in special:
+  
+  	
+	  sflag=True
+
+
+if aflag and dflag and sflag:
+  
+	
+	print 'strong password'
+
+
+else:
+  
+	
+	print 'weak password' 	 
+
+v.write a program that accepts a scentence and calculate the number of upper case and lower case letters
+
+stri=raw_input('enter a string')
+
+ucount=0
+
+lcount=0
+
+for i in stri:
+  
+	if i.isupper():
+
+	    ucount=ucount+1
+  
+	if i.islower():
+	
+    lcount=lcount+1
+
+
+print ("no of upper case is ",ucount)
+
+print ("no of lower case is ",lcount)
+
+
+vi.declare list containing numbers
+get only even numbers
+perform sum of those numbers
+
+l=[1,4,3,6,8,10,2]
+
+t=0
+for i in l:
+ 
+ if i%2==0:
+   
+	 t=t+i
+
+print t
+  
+
+vii.write a program that accepts a sequence of comma seperate numbers from the console and generate a list 
+and a tuple that contains every number
+
+stri=raw_input('enter set of numbers seperated by comma')
+
+l=stri.split(',')
+
+t=tuple(l)
+
+print l
+
+print t

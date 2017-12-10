@@ -1,0 +1,27 @@
+''' write a python script to get a student details from user using raw_input:
+ roll_id
+ name
+ class name
+ marks - '58,67,89,99'
+
+ not going to declare the dictionary 
+stud_dict = { 'roll_id':{'name':'sakthi','class':'7','marks':[1,2,3,4,5]},
+              'roll_id2':{'name':'sakthi2','class':'8','marks':[1,2,3,4,56]}
+            }
+'''
+
+stud_dict = {}
+count = int(raw_input("Enter no of students to enter to dictionary:"))
+for i in range(count):
+  print("\ngetting the details of student no: %s"%str(i+1))
+  roll_id = raw_input("Enter roll no:")
+  name = raw_input("Enter name:")
+  class_name = raw_input("Enter class:")
+  marks = raw_input("Enter marks:")
+
+  info_dict = {}
+  info_dict['name'] = name
+  info_dict['class'] = class_name
+  info_dict['marks'] = marks.split(',')
+  90stud_dict[roll_id] = info_dict
+print(stud_dict)
